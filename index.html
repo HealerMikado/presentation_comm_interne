@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>
+					La confidentialité sur le web
+				</h1>
+
+
+			</section>
+			<section>
+				<section>
+					<h3>
+						Qui qui peut voir que je passe ma journée à regarder des photos de chats trop mignons en train
+						de se
+						faire des calîns
+					</h3>
+				</section>
+
+				<section>
+					<img class="plain" src="https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/source.gif" alt=""
+						style="width:100%">
+
+				</section>
+			</section>
+
+			<section>
+				<h3>
+					Au menu aujourd'hui
+				</h3>
+
+				<ol>
+					<li>Généralité sur le web</li>
+					<li>Comment on récupère une page web ? </li>
+					<li>Comment on sécurise tout ça ? </li>
+				</ol>
+			</section>
+
+			<section>
+				<section>
+					<h2>Généralité sur le web</h2>
+				</section>
+				<section>
+					<h3>
+						Le web c'est quoi ?
+					</h3>
+					<ul>
+						<li>Inventé par Tim Berners-Lee il y a 30 ans</li>
+						<li>Le web n'est qu'une application d'internet</li>
+						<li>Accéder à des pages à partir de leur adresse (lien hypertext)</li>
+						<li>Se base sur le protocole HTTP</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h3>
+						Pour briller en société
+					</h3>
+					<ul>
+						<li>61% du traffic mondial est fait pas des bots</li>
+						<li>Le deep web représente 99% du web
+							<ul>
+								<li>deep web : pages non référencées par les moteurs de recherche</li>
+								<li>dark web : nécessite un logiciel particulier d'anonymisation (TOR) pour y accéder
+								</li>
+							</ul>
+						</li>
+						<li>Chaque minute 400h de vidéo sont upload sur youtube</li>
+						<li>Presque 2 milliards de sites existaient en octobre 2018</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Comment on récupère une page web ?</h2>
+				</section>
+
+				<section>
+					<h3>L'Hypertext Transfer Protocol</h3>
+					<ul>
+						<li>Le web se base sur l'hypertext transfer protocol</li>
+						<li>Récupérer une page se fait en deux temps
+							<ol>
+								<li>La demande (HTTP request)</li>
+								<li>La réponse (HTTP response) </li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>HTTP request exemple</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+							:authority: www.google.fr
+							:method: GET
+							:path: /
+							:scheme: https
+							accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+							accept-encoding: gzip, deflate, br
+							accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+							cache-control: max-age=0
+							cookie: CONSENT=YES+FR.fr+V10; SID=4AaDKTdnUDjY5geiJocKl7cTcgPWcGHrM7GcNAbjbOIdGPCPiNMW8rBRiI_PBzfWPPXvxA.; HSID=AX2GF5klB18BvooPf; SSID=AwFgMP-frkZvbXgN2; APISID=Eu8tmCdvXq_rpEV3/AF7IdyJ8XL3DrMVPz; SAPISID=www7Y8P7knEfyR9z/AQEUSrsMBxbL4VjqX; ANID=AHWqTUlUCfJO-X_hZK8mV5gxs1DFt24n9NjkcSVTdOvOU19qDBjc_qb58g8ahA6p; OTZ=4854766_52_52_123900_48_436380; NID=180=AopBrGC8_1xF_r3tJeY7LTRbnscTAm-E1CfLwlgbwfkafI5nHbLw8zc9VkaD7g1ixHoiSk0Ex4FGK5HIDqiSFGTVHWvDpNQJa1hq7oJvA8vcAkrTTEKnUguxLtQHMK70LENDz2JwhlugjhnUyPLRh0KRWBizVmTM_fq_dvkUcMdyg9vqFsKbUY1FxDPd5PAtp9ZwJZlaHjBS92ZQkTw7RYGl0lesrWjl2BYDcMGIlzxypc6w1a1N8_ugow-VUpPuqAjDDnDsnbE; 1P_JAR=2019-3-29-11
+							upgrade-insecure-requests: 1
+							user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+							x-client-data: CJe2yQEIo7bJAQjBtskBCKmdygEIqKPKAQi3pMoBCLGnygEI4qjKAQjwqcoBl
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h3>HTTP request simplifié</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+							headers frames
+
+							data frame
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Etape préalable : trouver l'adresse du site</h3>
+
+					<p>Vous tapez dans votre navigateur www.google.com.
+
+						<span class="fragment"> SAUF QUE </span> <span class="fragment"> Votre ordinateur ne connait
+							www.google.com</span>
+					</p>
+
+
+				</section>
+
+				<section>
+					<img class="plain"
+						src="https://media1.giphy.com/media/NLLQUmfh3os6c/giphy.gif?cid=790b76115c9def0a5a52424541cebe59"
+						style="width : 100%" alt="">
+
+				</section>
+
+				<section>
+					<img class="plain"
+						src="https://66.media.tumblr.com/d6f7c22b24f192f13b872f7d0a014a00/tumblr_ped2f57ZUL1vkppki_540.gif"
+						style="width : 100%" alt="">
+				</section>
+
+				<section>
+					<h3>Etape préalable : trouver l'adresse du site</h3>
+					<ul>
+						<li>www.google.com -> URL : fait pour les humains</li>
+						<li>216.58.213.163 -> IP : fait pour les machines</li>
+						<li>Passage de l'URL à l'IP grâce une requête DNS faite aux serveurs DNS (annuaire du web)</li>
+						<li class="fragment">Cette requête transite sur internet, donc des gens peuvent l'intercepter !
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>HTTP Request</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+						headers frames
+
+						data frame
+				</code></pre>
+				</section>
+
+				<section>
+					<h3>HTTP Request</h3>
+					<ul>
+						<li>La ressrouce que vous souhaitez</li>
+						<li>La fonction que vous utilisez (généralement GET ou POST)</li>
+						<li>Les champs des formulaires (login, mdp, carte bancaire)</li>
+						<li>Préférence de langue</li>
+						<li>Navigateur</li>
+						<li>etc</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>HTTP Request</h3>
+					<h4>Et tout ça en clair, donc lisibile par tout le monde</h4>
+				</section>
+
+				<section>
+					<img src="https://media.giphy.com/media/MM0Jrc8BHKx3y/source.gif" alt="" class="plain"
+						style="width : 100%">
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Comment on sécurise tout ça ?</h2>
+				</section>
+
+				<section>
+					<h3>En cryptant le maximum d'information</h3>
+				</section>
+
+				<section>
+					<h3>
+						La cryptographie c'est quoi ?
+					</h3>
+
+					<p>
+						Cacher un message à toutes personnes qui ne disposent pas de la clef de déchiffrement
+					</p>
+					<p class="fragment">Donc pas forcément un moyen informatique</p>
+
+				</section>
+
+				<section>
+					<h3>
+						Exemple de cryptage
+					</h3>
+
+					<ul>
+						<li>Code césar (décalage de l'alphabet)</li>
+						<li>Code enigma</li>
+						<li>Utiliser de l'argot</li>
+						<li>Parler dans une langue étrangère</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h3>Typologie de cryptage</h3>
+					<ul>
+						<li>Cryptage symétrique</li>
+						<li>Cryptage asymétrique</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Cryptage symétrique</h3>
+
+					<p>Une seule clef pour chiffrer et déchiffrer</p>
+					<p class="fragment">Emetteur et récepteur dispose de la même clef, cryptage dans les deux sens</p>
+				</section>
+
+				<section>
+					<h3>Cryptage symétrique</h3>
+					<p>Deux problèmes</p>
+					<ul>
+						<li>Beaucoup trop de clef (~n²)</li>
+						<li><b>Comment échanger la clef en toute sécurité ??</b></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Cryptage asymétrique, conclusion</h3>
+					<ul>
+						<li>Une clef pour chiffrer (clef publique)</li>
+						<li>Une pour déchiffrer (clef privée)</li>
+					</ul>
+					<p class="fragment">Cryptage à sens unique</p>
+				</section>
+
+				<section>
+					<h3>Cryptage asymétrique, fonctionnement</h3>
+					<ul>
+						<li>Vous donner à qui la demande la clef de chiffrement</li>
+						<li>Quelqu'un vous écrit un message et le chiffre avec cette clef</li>
+						<li>Vous utilisez votre clef de déchiffrement pour lire le message</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Cryptage asymétrique, fonctionnement</h3>
+					La clef de chiffrement peut être largement diffusée sans risque car elle juste à chiffrer le
+					message.
+					Seul le possesseur de la clef de déchiffrement pourra le lire.
+				</section>
+
+				<section>
+					<h3>Cryptage asymétrique, conclusion</h3>
+					<ul>
+						<li>Chiffrement à sens unique</li>
+						<li>Comment discuter facilement ?</li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="plain" src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" alt=""
+						style="width :100%">
+				</section>
+
+				<section>
+					<h3>Fusionner les deux types de cryptage</h3>
+				</section>
+
+				<section>
+					<h3>Et c'est ce que fait le HTTPS </h3>
+					Ouf on retourne au sujet principal
+				</section>
+
+				<section>
+					<h3>HyperText transfer protocol secured</h3>
+					<ul>
+						<li>Se base sur le HTTP</li>
+						<li>Couche de chiffrement en plus (Transport secured layer)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>HTTPS fonctionnement</h3>
+					<ul>
+						<li>Demande au serveur sa clef publique</li>
+						<li>Génération d'une clef de session par votre ordinateur</li>
+						<li>Chiffrement de la clef de session par la clef publique</li>
+						<li>Envoi de la clef chiffrée</li>
+						<li>Déchiffrement de la clef par le serveur</li>
+						<li>Toutes les communications à partir de maintenant seront faites avec la clef générée</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="https://tiptopsecurity.com/wp-content/uploads/2017/06/How-HTTPS-Works.png" alt=""
+						style="width: 30%" class="plain">
+				</section>
+
+			</section>
+
+			<section>
+				<h3>Sources</h3>
+				<ul>
+					<li> <a href="https://fr.wikipedia.org/wiki/World_Wide_Web">Wikipedia world wide web</a> </li>
+					<li> <a href="https://giphy.com">Mes supers gifs</a> </li>
+					<li> <a
+							href="https://stackoverflow.com/questions/187655/are-https-headers-encrypted">are-https-headers-encrypted</a>
+					</li>
+					<li><a href="https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique">Cryptographie
+							symétrique</a></li>
+					<li><a href="https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/#!prettyPhoto">rsa key explained</a></li>
+				</ul>
+
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
