@@ -193,14 +193,25 @@
 						<li>La fonction que vous utilisez (généralement GET ou POST)</li>
 						<li>Préférence de langue</li>
 						<li>Navigateur</li>
-						<li>etc</li>
 						<li><b>Les champs des formulaires (login, mdp, carte bancaire)</b></li>
+						<li>etc</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>HTTP Request</h3>
 					<h4>Et tout ça en clair, donc lisibile par tout le monde</h4>
+				</section>
+
+				<section>
+					<h3>HTTP Reponse</h3>
+					<p>
+						Contient un header avec quelques informations utiles ainsi que la ressource demandée (souvent une page web)
+					</p>
+					<p>
+						<b class="fragment">Elle aussi en clair</b>
+					</p>
+
 				</section>
 
 				<section>
@@ -262,7 +273,8 @@
 				<section>
 					<h3>Comparaison avec un coffret</h3>
 
-					<p class="fragment">La clef permet de fermer (chiffrer) et ouvrir (déchirer) le message envoyé</p>
+					<p class="fragment">La clef permet de fermer (chiffrer) et ouvrir (déchirer) un coffret contenant un message
+						secret</p>
 				</section>
 
 				<section>
@@ -353,9 +365,42 @@
 				</section>
 
 				<section>
+					<h3>Comparasion avec le coffret</h3>
+					<ul>
+						<li class="fragment">On récupère la clef publique qui sert à fermer la boîte du serveur</li>
+						<li class="fragment">On fabrique une clef</li>
+						<li class="fragment">On la met dans la boite que l'on ferme</li>
+						<li class="fragment">On l'envoie au serveur</li>
+						<li class="fragment">Il est le seul à pouvoir l'ouvrir avec sa clef privée</li>
+						<li class="fragment">On utilise maintenant la clef qu'on lui a envoyé</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>En résumé</h3>
+					On utilise le chiffrement assymétrique pour pouvoir échanger en toute sécurité une clef (temporaire) de
+					chiffrement symétique.
+				</section>
+
+
+				<section>
 					<h3>HTTPS</h3>
 					Rassurrez vous tout ça est fait automatiquement par votre navigateur
 				</section>
+
+				<section>
+					<h3>HTTPS</h3>
+					<p>
+						A partir de maintenant les requêtes et les réponses HTTP sont chiffrées
+					</p>
+					<ul>
+						<li class="fragment">Personne ne peut lire les informations que j'envoie</li>
+						<li class="fragment">Personne ne peut lire les informations que je reçois</li>
+						<li class="fragment">Théoriquement</li>
+					</ul>
+				</section>
+
 
 			</section>
 
@@ -388,7 +433,7 @@
 				<section>
 					<h3>Ce que le HTTPS ne permet pas</h3>
 					<ul>
-						<li>Annonymisation total de votre navigation (requete DNS, entête IP)</li>
+						<li>Annonymiser totalement votre navigation (requete DNS, entête IP)</li>
 						<li>Être en parfaite sécurité que le web</li>
 					</ul>
 				</section>
@@ -399,7 +444,24 @@
 						<li>Utiliser un proxy</li>
 						<li>Utiliser un VPN</li>
 						<li class="fragment">Mais ce sont des services payants</li>
+						<li class="fragment">Ou utiliser TOR</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Et surtout ...</h3>
+
+					<p>Faites attention à votre comportement en ligne</p>
+					<ul>
+						<li>Fishing</li>
+						<li>Malware</li>
+						<li>Sites peut recommandables</li>
+						<li>etc</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>La plus grande faille de sécurité d'un ordinateur est son utilisateur</h3>
 				</section>
 
 			</section>
@@ -435,6 +497,9 @@
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			history: true,
+			slideNumber: 'c/t',
+
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
