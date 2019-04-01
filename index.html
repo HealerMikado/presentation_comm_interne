@@ -43,8 +43,7 @@
 				</section>
 
 				<section>
-					<img class="plain" src="https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/source.gif" alt=""
-						style="width:100%">
+					<img class="plain" src="https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/source.gif" alt="" style="width:100%">
 
 				</section>
 			</section>
@@ -157,20 +156,18 @@
 				</section>
 
 				<section>
-					<img class="plain"
-						src="https://media1.giphy.com/media/NLLQUmfh3os6c/giphy.gif?cid=790b76115c9def0a5a52424541cebe59"
-						style="width : 100%" alt="">
+					<img class="plain" src="https://media1.giphy.com/media/NLLQUmfh3os6c/giphy.gif?cid=790b76115c9def0a5a52424541cebe59"
+					 style="width : 100%" alt="">
 
 				</section>
 
 				<section>
-					<img class="plain"
-						src="https://66.media.tumblr.com/d6f7c22b24f192f13b872f7d0a014a00/tumblr_ped2f57ZUL1vkppki_540.gif"
-						style="width : 100%" alt="">
+					<img class="plain" src="https://66.media.tumblr.com/d6f7c22b24f192f13b872f7d0a014a00/tumblr_ped2f57ZUL1vkppki_540.gif"
+					 style="width : 100%" alt="">
 				</section>
 
 				<section>
-					<h3>Etape préalable : trouver l'adresse du site</h3>
+					<h3>Etape préalable : trouver l'adresse IP du site</h3>
 					<ul>
 						<li>www.google.com -> URL : fait pour les humains</li>
 						<li>216.58.213.163 -> IP : fait pour les machines</li>
@@ -192,12 +189,12 @@
 				<section>
 					<h3>HTTP Request</h3>
 					<ul>
-						<li>La ressrouce que vous souhaitez</li>
+						<li>La ressource que vous souhaitez</li>
 						<li>La fonction que vous utilisez (généralement GET ou POST)</li>
-						<li>Les champs des formulaires (login, mdp, carte bancaire)</li>
 						<li>Préférence de langue</li>
 						<li>Navigateur</li>
 						<li>etc</li>
+						<li><b>Les champs des formulaires (login, mdp, carte bancaire)</b></li>
 					</ul>
 				</section>
 
@@ -207,8 +204,7 @@
 				</section>
 
 				<section>
-					<img src="https://media.giphy.com/media/MM0Jrc8BHKx3y/source.gif" alt="" class="plain"
-						style="width : 100%">
+					<img src="https://media.giphy.com/media/MM0Jrc8BHKx3y/source.gif" alt="" class="plain" style="width : 100%">
 				</section>
 
 			</section>
@@ -264,7 +260,13 @@
 				</section>
 
 				<section>
-					<h3>Cryptage symétrique</h3>
+					<h3>Comparaison avec un coffret</h3>
+
+					<p class="fragment">La clef permet de fermer (chiffrer) et ouvrir (déchirer) le message envoyé</p>
+				</section>
+
+				<section>
+					<h3>Cryptage symétrique, conclusion</h3>
 					<p>Deux problèmes</p>
 					<ul>
 						<li>Beaucoup trop de clef (~n²)</li>
@@ -273,7 +275,7 @@
 				</section>
 
 				<section>
-					<h3>Cryptage asymétrique, conclusion</h3>
+					<h3>Cryptage asymétrique</h3>
 					<ul>
 						<li>Une clef pour chiffrer (clef publique)</li>
 						<li>Une pour déchiffrer (clef privée)</li>
@@ -288,6 +290,13 @@
 						<li>Quelqu'un vous écrit un message et le chiffre avec cette clef</li>
 						<li>Vous utilisez votre clef de déchiffrement pour lire le message</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Comparaison avec un coffret</h3>
+
+					<p class="fragment">Il y a une clef pour fermer le coffrer <b>(clef publique)</b> et une clef pour l'ouvrir <b>(clef
+							privée)</b> </p>
 				</section>
 
 				<section>
@@ -306,8 +315,7 @@
 				</section>
 
 				<section>
-					<img class="plain" src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" alt=""
-						style="width :100%">
+					<img class="plain" src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" alt="" style="width :100%">
 				</section>
 
 				<section>
@@ -340,10 +348,64 @@
 				</section>
 
 				<section>
-					<img src="https://tiptopsecurity.com/wp-content/uploads/2017/06/How-HTTPS-Works.png" alt=""
-						style="width: 30%" class="plain">
+					<img src="https://tiptopsecurity.com/wp-content/uploads/2017/06/How-HTTPS-Works.png" alt="" style="width: 30%"
+					 class="plain">
 				</section>
 
+				<section>
+					<h3>HTTPS</h3>
+					Rassurrez vous tout ça est fait automatiquement par votre navigateur
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Conclusion</h2>
+				</section>
+
+				<section>
+					<h3>Qui peut voir ce que vous faites sur internet ?</h3>
+
+					<ul>
+						<li>Les gouvernements</li>
+						<li>Les founisseurs d'accès internet</li>
+						<li>Vos collègues de travail qui sont sur le même réseau</li>
+						<li>Toute personne sur le même spot wifi gratuit</li>
+						<li>Les fournisseurs de spot wifi gratuit</li>
+						<li>Et bien d'autres</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Ce que le HTTPS permet</h3>
+					<ul>
+						<li>Chiffrer vos communications d'info personnelles</li>
+						<li>Vous assurer que le site est bien le site que vous pensez (certificat)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Ce que le HTTPS ne permet pas</h3>
+					<ul>
+						<li>Annonymisation total de votre navigation (requete DNS, entête IP)</li>
+						<li>Être en parfaite sécurité que le web</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Pour plus de confidentialité</h3>
+					<ul>
+						<li>Utiliser un proxy</li>
+						<li>Utiliser un VPN</li>
+						<li class="fragment">Mais ce sont des services payants</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<section>
+				<h3>Merci pour votre attention</h3>
 			</section>
 
 			<section>
@@ -351,12 +413,12 @@
 				<ul>
 					<li> <a href="https://fr.wikipedia.org/wiki/World_Wide_Web">Wikipedia world wide web</a> </li>
 					<li> <a href="https://giphy.com">Mes supers gifs</a> </li>
-					<li> <a
-							href="https://stackoverflow.com/questions/187655/are-https-headers-encrypted">are-https-headers-encrypted</a>
+					<li> <a href="https://stackoverflow.com/questions/187655/are-https-headers-encrypted">are-https-headers-encrypted</a>
 					</li>
 					<li><a href="https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique">Cryptographie
 							symétrique</a></li>
-					<li><a href="https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/#!prettyPhoto">rsa key explained</a></li>
+					<li><a href="https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/#!prettyPhoto">rsa key
+							explained</a></li>
 				</ul>
 
 			</section>
