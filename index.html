@@ -8,7 +8,7 @@
 	<title>La confidentialité sur le web</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -46,7 +46,7 @@
 					<img class="plain" src="https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/source.gif" alt="" style="width:100%">
 
 				</section>
-			</section>
+			</section> 
 
 			<section>
 				<h3>
@@ -272,7 +272,7 @@
 				<section>
 					<h3>Comparaison avec un coffret</h3>
 
-					<p class="fragment">La clef permet de fermer (chiffrer) et ouvrir (déchirer) un coffret contenant un message
+					<p class="fragment">La clef permet de fermer (chiffrer) et ouvrir (déchiffrer) un coffret contenant un message
 						secret</p>
 				</section>
 
@@ -280,7 +280,7 @@
 					<h3>Cryptage symétrique, conclusion</h3>
 					<p>Deux problèmes</p>
 					<ul>
-						<li>Beaucoup trop de clef (~n²)</li>
+						<li>Beaucoup trop de clefs (~n²)</li>
 						<li><b>Comment échanger la clef en toute sécurité ??</b></li>
 					</ul>
 				</section>
@@ -297,7 +297,7 @@
 				<section>
 					<h3>Cryptage asymétrique, fonctionnement</h3>
 					<ul>
-						<li>Vous donner à qui la demande la clef de chiffrement</li>
+						<li>Vous donnez à qui la demande la clef de chiffrement</li>
 						<li>Quelqu'un vous écrit un message et le chiffre avec cette clef</li>
 						<li>Vous utilisez votre clef de déchiffrement pour lire le message</li>
 					</ul>
@@ -306,7 +306,7 @@
 				<section>
 					<h3>Comparaison avec un coffret</h3>
 
-					<p class="fragment">Il y a une clef pour fermer le coffrer <b>(clef publique)</b> et une clef pour l'ouvrir <b>(clef
+					<p class="fragment">Il y a une clef pour fermer le coffret <b>(clef publique)</b> et une clef pour l'ouvrir <b>(clef
 							privée)</b> </p>
 				</section>
 
@@ -317,7 +317,7 @@
 
 				<section>
 					<h3>Cryptage asymétrique, fonctionnement</h3>
-					La clef de chiffrement peut être largement diffusée sans risque car elle juste à chiffrer le
+					La clef de chiffrement peut être largement diffusée sans risque car elle sert juste à chiffrer le
 					message.
 					Seul le possesseur de la clef de déchiffrement pourra le lire.
 				</section>
@@ -348,10 +348,10 @@
 				</section>
 
 				<section>
-					<h3>HyperText transfer protocol secured</h3>
+					<h3>HyperText transfer Protocol Secured</h3>
 					<ul>
 						<li>Se base sur le HTTP</li>
-						<li>Couche de chiffrement en plus (Transport Layer Secured)</li>
+						<li>Couche de chiffrement en plus (Transport Layer Security)</li>
 					</ul>
 				</section>
 
@@ -361,9 +361,9 @@
 						<li>Demande au serveur sa clef publique</li>
 						<li>Génération d'une clef de session par votre ordinateur</li>
 						<li>Chiffrement de la clef de session par la clef publique</li>
-						<li>Envoi de la clef chiffrée</li>
-						<li>Déchiffrement de la clef par le serveur</li>
-						<li>Toutes les communications à partir de maintenant seront faites avec la clef générée</li>
+						<li>Envoi de la clef de session chiffrée</li>
+						<li>Déchiffrement de la clef de session par le serveur</li>
+						<li>Toutes les communications à partir de maintenant seront faites avec la clef de session</li>
 					</ul>
 				</section>
 
@@ -375,9 +375,9 @@
 				<section>
 					<h3>Comparasion avec le coffret</h3>
 					<ul>
-						<li class="fragment">On récupère la clef publique qui sert à fermer la boîte du serveur</li>
+						<li class="fragment">On récupère la clef publique qui sert à fermer le "coffret" du serveur</li>
 						<li class="fragment">On fabrique une clef</li>
-						<li class="fragment">On la met dans la boite que l'on ferme</li>
+						<li class="fragment">On la met dans le coffet que l'on ferme</li>
 						<li class="fragment">On l'envoie au serveur</li>
 						<li class="fragment">Il est le seul à pouvoir l'ouvrir avec sa clef privée</li>
 						<li class="fragment">On utilise maintenant la clef qu'on lui a envoyé</li>
@@ -484,11 +484,11 @@
 				<ul>
 					<li> <a href="https://fr.wikipedia.org/wiki/World_Wide_Web">Wikipedia world wide web</a> </li>
 					<li> <a href="https://giphy.com">Mes supers gifs</a> </li>
-					<li> <a href="https://stackoverflow.com/questions/187655/are-https-headers-encrypted">are-https-headers-encrypted</a>
+					<li> <a href="https://stackoverflow.com/questions/187655/are-https-headers-encrypted">Are https headers encrypted</a>
 					</li>
 					<li><a href="https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique">Cryptographie
 							symétrique</a></li>
-					<li><a href="https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/#!prettyPhoto">rsa key
+					<li><a href="https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/#!prettyPhoto">Rsa key
 							explained</a></li>
 				</ul>
 
@@ -508,6 +508,7 @@
 		Reveal.initialize({
 			history: true,
 			slideNumber: 'c/t',
+			
 
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
