@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>La confidentialité sur le web</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -90,7 +90,6 @@
 								</li>
 							</ul>
 						</li>
-						<li>Chaque minute 400h de vidéo sont upload sur youtube</li>
 						<li>Presque 2 milliards de sites existaient en octobre 2018</li>
 					</ul>
 				</section>
@@ -105,7 +104,7 @@
 				<section>
 					<h3>L'Hypertext Transfer Protocol</h3>
 					<ul>
-						<li>Le web se base sur l'hypertext transfer protocol</li>
+						<li>Le web se base sur l'Hypertext Transfer Protocol (HTTP)</li>
 						<li>Récupérer une page se fait en deux temps
 							<ol>
 								<li>La demande (HTTP request)</li>
@@ -148,7 +147,7 @@
 
 					<p>Vous tapez dans votre navigateur www.google.com.
 
-						<span class="fragment"> SAUF QUE </span> <span class="fragment"> Votre ordinateur ne connait
+						<span class="fragment"> SAUF QUE </span> <span class="fragment"> votre navigateur ne sait pas ce qu'est
 							www.google.com</span>
 					</p>
 
@@ -248,7 +247,7 @@
 
 					<ul>
 						<li>Code césar (décalage de l'alphabet)</li>
-						<li>Code enigma</li>
+						<li>Code enigma (¯\_(ツ)_/¯)</li>
 						<li>Utiliser de l'argot</li>
 						<li>Parler dans une langue étrangère</li>
 					</ul>
@@ -312,6 +311,11 @@
 				</section>
 
 				<section>
+					<h3>Le chiffrement asymétrique, fonctionnement</h3>
+					<img src="img/Asymmetric-encryption-primitive.png" alt="">
+				</section>
+
+				<section>
 					<h3>Cryptage asymétrique, fonctionnement</h3>
 					La clef de chiffrement peut être largement diffusée sans risque car elle juste à chiffrer le
 					message.
@@ -331,6 +335,10 @@
 				</section>
 
 				<section>
+					<img class="plain" src="img/why not both.jpg" alt="" style="height : 150%">
+				</section>
+
+				<section>
 					<h3>Fusionner les deux types de cryptage</h3>
 				</section>
 
@@ -343,7 +351,7 @@
 					<h3>HyperText transfer protocol secured</h3>
 					<ul>
 						<li>Se base sur le HTTP</li>
-						<li>Couche de chiffrement en plus (Transport secured layer)</li>
+						<li>Couche de chiffrement en plus (Transport Layer Secured)</li>
 					</ul>
 				</section>
 
@@ -360,8 +368,8 @@
 				</section>
 
 				<section>
-					<img src="https://tiptopsecurity.com/wp-content/uploads/2017/06/How-HTTPS-Works.png" alt="" style="width: 30%"
-					 class="plain">
+					<h3>Comment cela fonctionne</h3>
+					<img class="plain" src="img/schema https.png" alt="">
 				</section>
 
 				<section>
@@ -379,14 +387,14 @@
 
 				<section>
 					<h3>En résumé</h3>
-					On utilise le chiffrement assymétrique pour pouvoir échanger en toute sécurité une clef (temporaire) de
-					chiffrement symétique.
+					On utilise le chiffrement asymétrique pour pouvoir échanger en toute sécurité une clef (temporaire) de
+					chiffrement symétrique.
 				</section>
 
 
 				<section>
 					<h3>HTTPS</h3>
-					Rassurrez vous tout ça est fait automatiquement par votre navigateur
+					Rassurrez-vous, tout cela est fait automatiquement par votre navigateur
 				</section>
 
 				<section>
@@ -397,8 +405,8 @@
 					<ul>
 						<li class="fragment">Personne ne peut lire les informations que j'envoie</li>
 						<li class="fragment">Personne ne peut lire les informations que je reçois</li>
-						<li class="fragment">Théoriquement</li>
 					</ul>
+					<p class="fragment">Théoriquement</p>
 				</section>
 
 
@@ -416,7 +424,7 @@
 						<li>Les gouvernements</li>
 						<li>Les founisseurs d'accès internet</li>
 						<li>Vos collègues de travail qui sont sur le même réseau</li>
-						<li>Toute personne sur le même spot wifi gratuit</li>
+						<li>La personne à 3 tables de vous au starbucks qui squatte le wifi "gratuit" mais à 5€ le "café" peut-on parler de wifi gratuit ?</li>
 						<li>Les fournisseurs de spot wifi gratuit</li>
 						<li>Et bien d'autres</li>
 					</ul>
@@ -425,6 +433,7 @@
 				<section>
 					<h3>Ce que le HTTPS permet</h3>
 					<ul>
+						<li>Chiffrer une partie de votre navigation sur le web</li>
 						<li>Chiffrer vos communications d'info personnelles</li>
 						<li>Vous assurer que le site est bien le site que vous pensez (certificat)</li>
 					</ul>
@@ -433,7 +442,7 @@
 				<section>
 					<h3>Ce que le HTTPS ne permet pas</h3>
 					<ul>
-						<li>Annonymiser totalement votre navigation (requete DNS, entête IP)</li>
+						<li>Annonymiser totalement votre navigation (requêtes DNS, entête IP)</li>
 						<li>Être en parfaite sécurité que le web</li>
 					</ul>
 				</section>
@@ -444,7 +453,7 @@
 						<li>Utiliser un proxy</li>
 						<li>Utiliser un VPN</li>
 						<li class="fragment">Mais ce sont des services payants</li>
-						<li class="fragment">Ou utiliser TOR</li>
+						<li class="fragment">Ou utiliser TOR (darknet)</li>
 					</ul>
 				</section>
 
@@ -455,7 +464,7 @@
 					<ul>
 						<li>Fishing</li>
 						<li>Malware</li>
-						<li>Sites peut recommandables</li>
+						<li>Sites peu recommandables</li>
 						<li>etc</li>
 					</ul>
 				</section>
